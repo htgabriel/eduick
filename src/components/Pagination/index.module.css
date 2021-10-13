@@ -1,0 +1,23 @@
+.active {
+    filter: brightness(1.5);
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.pagination span {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    border-radius: 50%;
+    background-color: #7a57fd;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.pagination span:hover {
+    filter: brightness(1.5);
+}
