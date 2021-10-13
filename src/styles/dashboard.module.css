@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+.dashboard_container {
+	background-color: #f1f5f7;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: OpenSans, sans-serif;
+	color: #444;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 191.68%;
+	overflow-x: hidden;
+	position: relative;
+}
+* {
+	box-sizing: border-box;
+}
+
+/* importing fonts */
+.bold {
+	font-weight: bold;
+}
+/* end importing fonts */
+
+
+.dashboard_container .container {
+	width: 90%;
+	padding: 30px;
+}
+
+.navbar {
+	width: 100%;
+	background-color: #7a57fd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.navbar > div {
+	width: 90%;
+	padding: 15px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.navbar .logo {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	color: #fff;
+	font-size: 12px;
+}
+.navbar .logo img {
+	width: 100%;
+	height: auto;
+	max-height: 20px;
+}
+
+.navbar .user {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+.navbar .user img {
+	width: 34px;
+	height: 34px;
+	object-fit: contain;
+}
+.navbar .user a {
+	position: relative;
+}
+.navbar .user a::before {
+	content: '';
+	display: flex;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #ffd74f;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	z-index: 2;
+}
+
+.navbar .user button {
+	background-color: #6041d0;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 15px;
+	font-size: 12px;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.navbar .user button:hover {
+	filter: saturate(1.3);
+}
+
+.logo span {
+	font-size: 14px;
+}
+
+.logo a, .user a {
+	display: flex;
+	align-items: center;
+}
+
+.dashboard {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	gap: 30px;
+	width: 100%;
+}
+
+.dashboard .header .shape1, .dashboard .header .shape2 {
+	position: absolute;
+	border-radius: 0 50% 50% 50%;
+}
+.dashboard .header .shape1 {
+	background: linear-gradient(180deg, #fad961 0%, #ffc702 60%);
+	width: 150px;
+	height: 150px;
+	left: -40px;
+	top: 70px;
+	z-index: 5;
+}
+.dashboard .header .shape2 {
+	background: #ffb800;
+	width: 70px;
+	height: 70px;
+	left: -25px;
+	top: 45px;
+	z-index: 6;
+}
+
+
+.dashboard .header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	background-color: #fff;
+	padding: 50px 150px;
+	gap: 30px;
+	position: relative;
+}
+.dashboard .header .title {
+	color: #200e64;
+	font-size: 22px;
+	margin-bottom: 15px;
+	width: max-content;
+	position: relative;
+}
+.dashboard .header .title::after {
+	content: '';
+	display: flex;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #ffd74f;
+	position: absolute;
+	left: calc(100% + 2px);
+	bottom: 6.5px;
+}
+.dashboard .header .hello {
+	width: 80%;
+	max-width: 700px;
+}
+.dashboard .header img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.dashboard .grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 30px;
+}
+
+
+
+.footer {
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-size: 14px;
+	padding: 15px;
+	z-index: 11;
+}
+
+.shape4 {
+	position: absolute;
+	right: calc(100% - 15px);
+}
+
+#changeMode, .change-mode, .open-changeMode, .d_none{
+	display: none;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 991px) {
+	.hide-mobile {
+		display: none;
+	}
+
+	.dashboard_container .container {
+		width: 100%;
+		padding: 30px;
+	}
+
+	.open-changeMode > span {
+		width: 14px;
+		height: 2px;
+		background-color: #2e3a59;
+		position: relative;
+		transition: 0.3s;
+		border-radius: 10px
+	}
+	.open-changeMode > span:nth-child(1) {
+		transform: rotate(45deg) translate(0px, 0px);
+		left: 3px;
+	}
+	.open-changeMode > span:nth-child(2) {
+		transform: rotate(-45deg);
+		right: 2px;
+	}
+
+	.change-mode, .open-changeMode{
+		display: flex;
+		transition: 0.3s;
+		cursor: pointer;
+	}
+	.open-changeMode {
+		height: 25px;
+		align-items: center;
+	}
+	.change-mode {
+		position: absolute;
+		top: 54px;
+		left: 0;
+		width: 100%;
+		padding: 0 15px;
+		display: flex;
+		align-items: center !important;
+		justify-content: space-between;
+		background-color: #fff;
+		width: 100%;
+		color: #7b58fd;
+		text-decoration: none;
+		font-size: 14px;
+		overflow: hidden;
+		max-height: 0px;
+		transition-delay: 0.2s;
+	}
+
+	.arrow {
+		transition: 0.3s;
+	}
+	.change-mode:hover .arrow {
+		transform: translate(5px, 0);
+	}
+	.arrow span {
+		display: flex;
+		height: 2px;
+		background-color: #abb0bd;
+		position: relative;
+		border-radius: 10px;
+	}
+	.arrow span:nth-child(1) {
+		width: 16px;
+		transform: translate(-10px, 3px);
+	}
+	.arrow span:nth-child(2) {
+		width: 10px;
+		transform: rotate(45deg) translate(-3px, 0);
+	}
+	.arrow span:nth-child(3) {
+		width: 10px;
+		transform: rotate(135deg) translate(3px, 0);
+	}
+	.backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.3s;
+		display: flex;
+		z-index: 6;
+		height: 100%;
+		width: 100%;
+		background-color: #abb0bd60;
+	}
+
+	.rotateIcon {
+		transform: scaleY(-1);
+	}
+	.showChangeMode {
+		max-height: 60px;
+		padding: 15px;
+	}
+	.showBackdrop {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.navbar > div {
+		width: 100%;
+		padding: 10px 30px;
+		align-items: center;
+	}
+	.navbar {
+		position: sticky;
+	}
+
+	.dashboard .header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
+		background-color: #fff;
+		padding: 50px 30px;
+		gap: 0px;
+		position: relative;
+	}
+	.dashboard .header .hello {
+		width: 100%;
+		max-width: unset;
+	}
+
+	.dashboard .header .shape1 {
+		background: linear-gradient(180deg, #fad961 0%, #ffc702 60%);
+		width: 80px;
+		height: 80px;
+		left: calc(100% - 85px);
+		top: 9px;
+		z-index: 5;
+	}
+	.dashboard .header .shape2 {
+		background: #ffb800;
+		width: 40px;
+		height: 40px;
+		left: calc(100% - 75px);
+		top: -10px;
+		z-index: 5;
+	}
+
+	.dashboard .grid {
+		grid-template-columns: 1fr;
+	}
+}
