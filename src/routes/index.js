@@ -9,6 +9,8 @@ export default function Routes(){
 		<Switch>
 			<Route exact path={"/"} component={Home} />
 			<Route exact path={"/dashboard"} component={Dashboard} />
+			<Route path={"*"} component={Home} />
+			
 		</Switch>
 	)
 }
