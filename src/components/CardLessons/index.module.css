@@ -1,0 +1,73 @@
+.bold {
+    font-weight: bold;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.stars button:hover {
+    filter: grayscale(1) brightness(1.1);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.stars button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    filter: grayscale(1);
+}
+
+.active:hover {
+    filter: brightness(1.1);
+}
+
+.active {
+    filter: grayscale(0) !important;
+}
+
+.stars img {
+    width: 18px;
+    object-fit: contain;
+}
+
+.lessons {
+    background-color: #ece9f6;
+    padding: 0 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #2f2f31;
+}
+
+.title {
+    width: 100%;
+}
+
+.title a {
+    color: #200e64;
+    text-decoration: none;
+}
